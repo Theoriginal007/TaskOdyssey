@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -13,29 +15,51 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin: 0;
+  padding: 20px;
 }
 
 h1 {
   color: rgb(179, 131, 226);
-  font-size: 10rem;
+  font-size: 5rem;
   text-align: center;
-  opacity: 0.4;
+  opacity: 0.8;
+  margin-bottom: 2rem;
 }
 
 form {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-  width: 400px;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .input {
-  border: none;
+  border: 2px solid #e5e5e5;
+  border-radius: 5px;
   color: #444;
-  font-size: 2rem;
-  padding: 1rem 2rem;
-  display: block;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
   width: 100%;
+}
+
+.add-button {
+  padding: 0.5rem 1rem;
+  background-color: rgb(179, 131, 226);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: rgb(150, 100, 200);
 }
 
 .input::placeholder {
@@ -51,18 +75,49 @@ form {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  max-height: 400px;
+  overflow-y: auto;
 }
 
 .todos li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-top: 1px solid #e5e5e5;
-  cursor: pointer;
   font-size: 1.5rem;
   padding: 1rem 2rem;
+  transition: background-color 0.3s;
+}
+
+.todos li:hover {
+  background-color: #f0f0f0;
 }
 
 .todos li.completed {
   color: #b6b6b6;
   text-decoration: line-through;
+}
+
+.complete-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #444;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.complete-circle.completed {
+  background-color: rgb(179, 131, 226);
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 small {

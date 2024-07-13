@@ -3,17 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>TaskOdyssey</title>
   </head>
   <body>
-    <h1>todos</h1>
-    <form id="form">
-      <input type="text" class="input" id="input" placeholder="Enter your todo" autocomplete="off">
-
-      <ul class="todos" id="todos"></ul>
+    <h1>TaskOdyssey</h1>
+    <form id="form" aria-label="Todo Form">
+      <input
+        type="text"
+        class="input"
+        id="input"
+        placeholder="Enter your todo"
+        autocomplete="off"
+        aria-label="Todo Input"
+      />
+      <input
+        type="time"
+        class="input"
+        id="time"
+        placeholder="Enter completion time"
+        aria-label="Completion Time"
+      />
+      <button type="submit" class="add-button">Add Task</button>
+      <ul class="todos" id="todos" aria-label="Todo List"></ul>
     </form>
-    <small>Left click to toggle completed. <br> Right click to delete todo</small>
+    <small>Click the circle to show completion. Click the X button to remove the tasks.</small>
 
     <script src="script.js"></script>
   </body>
